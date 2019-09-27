@@ -6,7 +6,7 @@ require_once 'classes/chickens.php';
 $totalEggs = 0;
 $totalMilk = 0;
 $QuantityCows = 10;
-$QuantityChickens = 10;
+$QuantityChickens = 20;
 $stable = array();
 $coop = array();
 
@@ -42,16 +42,6 @@ echo '<br>';
 echo "Получено молока {$totalMilk}";
 echo '<br>';
 echo "Получено яиц: {$totalEggs}";
-
-// echo '<pre>';
-// print_r($totalEggs);
-// echo '<br>';
-// print_r($totalMilk);
-// echo '<br>';
-// print_r($stable);
-// echo '<br>';
-// print_r($coop);
-// echo '</pre>';
 
 
 
