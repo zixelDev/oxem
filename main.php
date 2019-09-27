@@ -26,11 +26,11 @@ function GetProducts()
 {
     global $stable, $coop, $totalEggs, $totalMilk;
     foreach ($stable as $cow) {
-        $gain = $cow->getMilk();
+        $gain = $cow->GetProducts();
         $totalMilk += $gain;
     }
     foreach ($coop as $chicken) {
-        $gain = $chicken->getEggs();
+        $gain = $chicken->GetProducts();
         $totalEggs += $gain;
     }
 }
