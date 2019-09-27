@@ -6,7 +6,7 @@ class Cows extends Animal {
     {
         parent::__construct();
         $this->type = 'Cow';
-        $this->products = rand(8,12);
+        $this->products = random_int(8,12);
     }
     
 }
