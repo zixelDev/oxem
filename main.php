@@ -3,8 +3,6 @@ require_once 'classes/animal.php';
 require_once 'classes/cows.php';
 require_once 'classes/chickens.php';
 
-$totalEggs = 0;
-$totalMilk = 0;
 $QuantityCows = 10;
 $QuantityChickens = 20;
 $stable = array();
@@ -22,16 +20,19 @@ function CreateAnimals()
     }
 }
 
+// CreateAnimals();
+// echo '<pre>';
+// echo print_r($coop);
+// echo print_r($stable);
+// echo '</pre>';
 function GetProducts()
 {
-    global $stable, $coop, $totalEggs, $totalMilk;
+    global $stable, $coop;
     foreach ($stable as $cow) {
-        $gain = $cow->GetProducts();
-        $totalMilk += $gain;
+        $cow->GetProducts();
     }
     foreach ($coop as $chicken) {
-        $gain = $chicken->GetProducts();
-        $totalEggs += $gain;
+        $chicken->GetProducts();
     }
 }
 
@@ -39,9 +40,9 @@ CreateAnimals();
 echo 'Животные созданы!';
 GetProducts();
 echo '<br>';
-echo "Получено молока {$totalMilk}";
+echo "Получено молока:" .Cows::$totalMilk;
 echo '<br>';
-echo "Получено яиц: {$totalEggs}";
+echo "Получено яиц:" .Chickens::$totalEggs;
 
 
 
